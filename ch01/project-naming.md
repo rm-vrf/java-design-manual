@@ -20,3 +20,82 @@
 
 为了避免与类和接口名称发生冲突，包名称全部使用小写字符。
 
+## 项目和模块
+
+项目和模块的命名方法以 Apache 为标准，参考 Hadoop 项目的源码结构：
+
+```sh
+.
+└── hadoop-main
+    ├── hadoop-project
+    ├── hadoop-maven-plugins
+    ├── hadoop-client
+    ├── hadoop-build-tools
+    ├── hadoop-dist
+    └── hadoop-mapreduce-project
+        ├── hadoop-mapreduce-examples
+        └── hadoop-mapreduce-client
+    └── hadoop-tools
+        ├── hadoop-openstack
+        ├── hadoop-tools-dist
+        ├── hadoop-archives
+        ├── hadoop-archive-logs
+        ├── hadoop-pipes
+        ├── hadoop-aws
+        ├── hadoop-gridmix
+        ├── hadoop-azure
+        ├── hadoop-rumen
+        ├── hadoop-streaming
+        ├── hadoop-azure-datalake
+        ├── hadoop-extras
+        ├── hadoop-datajoin
+        ├── hadoop-distcp
+        ├── hadoop-sls
+        └── hadoop-ant
+    ├── hadoop-project-dist
+    ├── hadoop-yarn-project
+        └── hadoop-yarn
+            ├── hadoop-yarn-registry
+            ├── hadoop-yarn-client
+            ├── hadoop-yarn-applications
+                ├── hadoop-yarn-applications-unmanaged-am-launcher
+                └── hadoop-yarn-applications-distributedshell
+            ├── hadoop-yarn-api
+            ├── hadoop-yarn-common
+            ├── hadoop-yarn-server
+                ├── hadoop-yarn-server-common
+                ├── hadoop-yarn-server-timeline-pluginstorage
+                ├── hadoop-yarn-server-tests
+                ├── hadoop-yarn-server-applicationhistoryservice
+                ├── hadoop-yarn-server-sharedcachemanager
+                ├── hadoop-yarn-server-web-proxy
+                ├── hadoop-yarn-server-resourcemanager
+                └── hadoop-yarn-server-nodemanager
+            └── hadoop-yarn-site
+    ├── hadoop-minicluster
+    ├── hadoop-common-project
+        ├── hadoop-auth
+        ├── hadoop-common
+        ├── hadoop-nfs
+        ├── hadoop-auth-examples
+        ├── hadoop-kms
+        ├── hadoop-annotations
+        └── hadoop-minikdc
+    ├── hadoop-hdfs-project
+        ├── hadoop-hdfs-client
+        ├── hadoop-hdfs-httpfs
+        ├── hadoop-hdfs-native-client
+        ├── hadoop-hdfs-nfs
+        └── hadoop-hdfs
+    └── hadoop-assemblies
+```
+
+Hadoop 项目命名有以下特点：
+
+- 采用中划线命名法：单词之间使用中划线隔开，单词使用小写字母；
+- 子模块命名可以用父模块名称作为前缀；
+- 为了避免名称冲突，一些项目和模块后加上了 `-project` 后缀。
+
+可以在项目和模块命名时参考这些规则。
+
+
